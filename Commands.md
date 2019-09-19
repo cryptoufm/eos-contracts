@@ -1,51 +1,51 @@
 *** Note that the contract name and the Folder it's in must have the same name ***
 
-Create Wallet 
+**Create Wallet** 
 
 ```cleos wallet create -n <WalletName> -f Doc.txt```
 
-Open Wallet
+**Open Wallet**
 
 ```cleos wallet open -n <WalletName>```
 
-Unlock Wallet
+**Unlock Wallet**
 
 ```cleos wallet unlock -n <WalletName> --password <KeyPrivate>```
 
-Import Private Key
+**Import Private Key**
 
 ```cleos wallet import -n <WalletName>```
 
 ```cleos -u http://jungle2.cryptolions.io:80 get account <YourAccount>```
 
-Buy RAM
+**Buy RAM**
 
 ```cleos -u http://jungle2.cryptolions.io:80 system buyram <YourAccount> <YourAccount> <AmmountInEOS>```
 
-Compile Contract
+**Compile Contract**
 
 ```eosio-cpp <contract>.cpp -o <contract>.wasm```
 
-Deploy Contract
+**Deploy Contract**
 
 ```cleos -u http://jungle2.cryptolions.io:80 set contract <YourAccount> <../ContractDir> -p account@active```
 
-Executed Transaction: <TransactionID> 
+Executed Transaction: '<TransactionID>' 
 
 Check if your contract has been succesfully deployed at: https://jungle.bloks.io/ (Look for your account)
 
-Call Contract
+**Call Contract**
 
 ```cleos -u http://jungle2.cryptolions.io:80 push action <Contract> hi '["XXX"]' -p account@active```
 
-Create Private/public kbytes
+**Create Private/public kyes**
 
 ```cleos -u http://jungle2.cryptolions.io:80 create key -f KeysUser.txt```
 
-Create account to Jungle Testnet
+**Create account to Jungle Testnet**
 
 ```cleos -u http://jungle2.cryptolions.io:80 system newaccount --stake-net "<AmmountInEOS>" --stake-cpu "<AmmountInEOS>" --buy-ram-kbytes 4 <AccountOwner> <NewAccountName> <OwnerPublicKey> <ActivePublicKey>```
 
-Send EOS
+**Send EOS**
 
 ```cleos -u http://jungle2.cryptolions.io:80 transfer <YourAccount> AccountToSend "<AmmountInEOS>" "<Message>"```
