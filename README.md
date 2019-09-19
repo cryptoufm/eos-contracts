@@ -46,9 +46,11 @@ Based on what we learned, the final objective was to create a Treasure-Hunt like
   13. Compile the Contract
   14. Deploy the Contract
   15. Call the contract
+    
     15.1 Check if your contract is deployed here: https://jungle.bloks.io (Search for your Jungle account)
   16. Create a Multi Index Table with the desired types(Parameters)
   17. Deploy your Multi Index Table with an account different to that where you have your contract.
+    
     17.1 Check if your table has been deployed here: https://jungle.bloks.io (Search for your Jungle account)
   18. Call the contract with the table to check it works properly
   
