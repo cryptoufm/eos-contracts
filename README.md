@@ -11,7 +11,7 @@ We based the game on the Jungle TestNet as they provide the ability to claim 100
 We also wanted to leave the game as Open Source, so anyone could come into this Repositoy and run the commands, while also having the ability to change the parameters for the game to adapt to their own needs.
 
 ## Objectives
-To understand how BlockChain and EOS on specific work. 
+To understand how BlockChain and EOS in specific work. 
 The concepts we want to expand our knowledge in are: 
   - Contracts
   - Tokens
