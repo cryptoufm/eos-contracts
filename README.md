@@ -46,13 +46,11 @@ Based on what we learned, the final objective was to create a Treasure-Hunt like
   13. Compile the Contract
   14. Deploy the Contract
   15. Call the contract
-    
-    15.1 Check if your contract is deployed here: https://jungle.bloks.io (Search for your Jungle account)
-  16. Create a Multi Index Table with the desired types(Parameters)
-  17. Deploy your Multi Index Table with an account different to that where you have your contract.
-    
-    17.1 Check if your table has been deployed here: https://jungle.bloks.io (Search for your Jungle account)
-  18. Call the contract with the table to check it works properly
+  16. Check if your contract is deployed here: https://jungle.bloks.io (Search for your Jungle account)
+  17. Create a Multi Index Table with the desired types(Parameters)
+  18. Deploy your Multi Index Table with an account different to that where you have your contract.
+  19. Check if your table has been deployed here: https://jungle.bloks.io (Search for your Jungle account)
+  20. Call the contract with the table to check it works properly
   
 ## Multi Index Table
 Multi Index Tables are a way to cache state and/or data in RAM for fast access. 
@@ -91,6 +89,6 @@ https://developers.eos.io/eosio-home/docs
 https://jungle.bloks.io/
 https://github.com/CryptoLions/EOS-Jungle-Testnet
 
-## Game playable with this
+## Playable Game
 The final product is a Treasure Hunt Game where players start with a fixed ammount of Money. The objective of the game is to find 6 hidden 'Treasures' (in our case, QR Codes). For each of this treasures, the played has the ability to buy 2 hints. The first hint is the cheaper one, but is also quite vague. The second hint is more expensive, but will lead you directly to the treasure.
 The Reward given when the player finds a Treasure would vary depending on how much time they take to find it, and depending on how many hints they have used.
