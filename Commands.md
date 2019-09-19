@@ -30,7 +30,7 @@ Deploy Contract
 
 ```cleos -u http://jungle2.cryptolions.io:80 set contract <YourAccount> <../ContractDir> -p account@active```
 
-executed transaction: 4bbc4b90dcceb115a6e7a1b3ff30522460a2897f643608e08ed1bcfa9035fa76  712 
+Executed Transaction: <TransactionID> 
 
 Check if your contract has been succesfully deployed at: https://jungle.bloks.io/ (Look for your account)
 
