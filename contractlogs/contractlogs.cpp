@@ -2,56 +2,50 @@
 
 using namespace eosio;
 
-class [[eosio::contract("contractplayer")]] contractplayer : public eosio::contract {
+class [[eosio::contract("contractlogs")]] contractlogs : public eosio::contract {
 
     
   public:
 
-    contractplayer(name receiver, name code, datastream<const char*> ds):contract(receiver, code, ds) {}
+    contractlogs(name receiver, name code, datastream<const char*> ds):contract(receiver, code, ds) {}
     
     [[eosio::action]]
-    void insert(name user, std::string player_name, std::string balance, std::string email) {
+    void insert(name user, std::string player_name, std::string action, std::string time_stampt, std::string location, std::string balance_before, std::string balance_after) {
         require_auth( user );
         player_logs crudlogs(get_self(), get_first_receiver().value);
-        auto iterator = crudlogs.find(user.value);
-        if( iterator == crudlogs.end() )
-        {
-            crudlogs.emplace(user, [&]( auto& row ) {
-            row.key = user;
-            row.player_name = player_name;
-            row.balance = balance;
-            row.email = email;
-            });
-        }
-        else {
-            crudlogs.modify(iterator, user, [&]( auto& row ) {
-            row.key = user;
-            row.player_name = player_name;
-            row.balance = balance;
-            row.email = email;
-            });
-        }
+        crudlogs.emplace(user, [&]( auto& row ) {
+          row.key = user;
+          row.player_name = player_name;
+          row.action = action;
+          row.time_stampt = time_stampt;
+          row.location = location;
+          row.balance_before = balance_before;
+          row.balance_after = balance_after;
+        });
     }
 
+    // [[eosio::action]]
+    // void erase(name user) {
+    //     require_auth(user);
+    //     player_logs crudlogs( get_self(), get_first_receiver().value);
 
-    [[eosio::action]]
-    void erase(name user) {
-        require_auth(user);
-        player_logs crudlogs( get_self(), get_first_receiver().value);
-
-        auto iterator = crudlogs.find(user.value);
-        check(iterator != crudlogs.end(), "Player does not exist");
-        crudlogs.erase(iterator);
-    }
+    //     auto iterator = crudlogs.find(user.value);
+    //     check(iterator != crudlogs.end(), "Player does not exist");
+    //     crudlogs.erase(iterator);
+    // }
 
 
   private:
     struct [[eosio::table]] player {
       name key;
       std::string player_name;
-      std::string balance;
-      std::string email;
-
+      std::string action;
+      std::string time_stampt;
+      std::string location;
+      std::string balance_before;
+      std::string balance_after;
+      
+    
       uint64_t primary_key() const { return key.value;}
     };
   
