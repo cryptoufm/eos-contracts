@@ -1,4 +1,4 @@
-# eos-contracts
+# EOS-Contracts
 
 ## Introduction
 The idea behind this project is to create a Game that has it's backend based purely off BlockChain.
